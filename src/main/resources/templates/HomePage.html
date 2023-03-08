@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- <h1 th:text="${message}"></h1> -->
+	<h1>Home Page</h1>
+	<h2>Programer's Data : CRUD Operations</h2>
+
+	<hr/>
+	<form action="addProgrammer" method="post"> <!-- this method by default get, but get is insecure so we are gonna replace it by post method and we also restrict the mapping in controller so that it just receive post request data from a form -->
+		<!-- eikhane action attribute er value ar ProgrammerInfo.html page jaoar maping e @Requestmapping er value same hote hobe taholei "Add Programmer button " press korle ta ProgrammerInfo.html page e jabe-->
+		
+		<h3>Enter Programer's Name</h3>
+		<input type="text" name="pName"></input>
+		<h3>Enter Programer's Language</h3>
+		<input type="text" name="pLang"></input>
+		<button type="submit">Add Programmer</button>
+	</form>
+	<hr/>
+	<form action="findById" method="post">
+		<h3>Enter Programmer's Id</h3>
+		<input type="text" name="pId"></input>
+		<button type="submit">Find By Id</button>
+	</form>
+	
+	<hr/>
+	<form action="findByName" method="post">
+		<h3>Enter Programmer's Name</h3>
+		<input type="text" name="pName"></input>
+		<button type="submit">Find By Programmer's Name</button>
+	</form>
+	
+	<hr/>
+	<form action="findByLang" method="post">
+		<h3>Enter Programmer's Language</h3>
+		<input type="text" name="pLang"></input>
+		<button type="submit">Find By Language</button>
+	</form>
+	
+	<hr/>
+	<form action="deleteProgrammer" method="get">
+		<h3>Enter Programmer's Id</h3>
+		<input type="text" name="pId"></input>
+		<button type="submit">Delete</button>
+	</form>
+	
+	<hr/>
+	<form action="updateProgrammer" method="post"> 
+		<h3>Enter Programer's Id</h3>
+		<input type="text" name="pId"></input>
+		<h3>Enter Programer's Name</h3>
+		<input type="text" name="pName"></input>
+		<h3>Enter Programer's Language</h3>
+		<input type="text" name="pLang"></input>
+		<button type="submit">Update Programmer</button>
+	</form>
+	
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Programmer Info</title>
+</head>
+<body>
+	<h1 th:text="${message}"> </h1>
+	<h1><p><p></h1>
+	<h1>Programmer Info</h1>
+	<h1>th:text=${pId}</h1>
+	<h1>th:text=${pName}</h1>
+	<h1>th:text=${pLang}</h1>
+	<h1 th:text="${p.pId}" > </h1>
+	<h1 th:text="${p.pName}" > </h1>
+	<h1 th:text="${p.pLang}" > </h1>
+	 <!-- here we can not use -->
+	 <!-- p.getId() -->
+	 <!-- i donno why -->
+	<h1></h1>
+</body>
+</html>
